@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.example.week3task.ProductListFragment"
+        android:label="Product List"
+        tools:layout="@layout/fragment_product_list" >
+
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.week3task.ProductDetailFragment"
+        android:label="Product Detail"
+        tools:layout="@layout/fragment_product_detail" >
+        <argument
+            android:name="product"
+            app:argType="com.example.week3task.Product"/>
+<!--        <argument-->
+<!--            android:name="name"-->
+<!--            app:argType="string" />-->
+<!--        <argument-->
+<!--            android:name="price"-->
+<!--            app:argType="float" />-->
+<!--        <argument-->
+<!--            android:name="description"-->
+<!--            app:argType="string" />-->
+<!--        <argument-->
+<!--            android:name="imageUrl"-->
+<!--            app:argType="string" />-->
+    </fragment>
+</navigation>
